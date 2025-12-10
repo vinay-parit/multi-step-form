@@ -1,44 +1,82 @@
-import React from 'react'
 
-const Page2 = () => {
+
+
+const Page2 = ({ plan, setPlan, billingType, setBillingType, next, back }) => {
+  const plans = [
+    {
+      name: "Arcade",
+      monthly: 9,
+      yearly: 90,
+      img: "/assets/images/icon-arcade.svg",
+    },
+    {
+      name: "Advanced",
+      monthly: 12,
+      yearly: 120,
+      img: "/assets/images/icon-advanced.svg",
+    },
+    {
+      name: "Pro",
+      monthly: 15,
+      yearly: 150,
+      img: "/assets/images/icon-pro.svg",
+    },
+  ];
+
   return (
     <div className="select-plan">
-      <h2>Select your plan </h2>
-      <p>You have the option of monthly or yearly billing. </p>
+      <h2>Select your plan</h2>
+      <p>You have the option of monthly or yearly billing.</p>
 
       <div className="plans">
-        <div className="arcade">
-          <img src="./public/assets/images/icon-arcade.svg" alt="" />
+        {plans.map((p) => (
+          <div
+            className={plan.name === p.name ? "plan-card active" : "plan-card"}
+            onClick={() => setPlan(p)}
+            key={p.name}
+          >
+            <img src={p.img} alt="" />
+            <h3>{p.name}</h3>
 
-          <h3>Arcade</h3>
-          <span>$9/mo</span>
-        </div>
-
-        <div className="advanced">
-          <img src="./public/assets/images/icon-advanced.svg" alt="" />
-
-          <h3>Advanced</h3>
-          <span>$12/mo</span>
-        </div>
-
-        <div className="pro">
-          <img src="./public/assets/images/icon-pro.svg" alt="" />
-
-          <h3>Pro</h3>
-          <span>$15/mo</span>
-        </div>
+            {billingType === "monthly" ? (
+              <span>${p.monthly}/mo</span>
+            ) : (
+              <span>${p.yearly}/yr</span>
+            )}
+          </div>
+        ))}
       </div>
 
-      <div className="toggle-btn"></div>
+      {/* Toggle */}
+      <div className="billing-toggle">
+        <p className={billingType === "monthly" ? "active-type" : ""}>
+          Monthly
+        </p>
 
-      <div class="buttons">
-        <button class="back-btn">Go Back</button>
-        <button class="next-btn" type="submit">
+        <label className="switch">
+          <input
+            type="checkbox"
+            checked={billingType === "yearly"}
+            onChange={() =>
+              setBillingType(billingType === "monthly" ? "yearly" : "monthly")
+            }
+          />
+          <span className="slider"></span>
+        </label>
+
+        <p className={billingType === "yearly" ? "active-type" : ""}>Yearly</p>
+      </div>
+
+      <div className="buttons">
+        <button className="back-btn" onClick={back}>
+          Go Back
+        </button>
+        <button className="next-btn" onClick={next}>
           Next Step
         </button>
       </div>
     </div>
   );
-}
+};
 
-export default Page2
+export default Page2;

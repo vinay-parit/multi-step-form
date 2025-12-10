@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
   --Blue-950: hsl(213, 96%, 18%);
@@ -38,6 +38,8 @@
   background-color: var(--White);
 }
 
+
+
 .sidebar{
 background-image: url("./public/assets/images/bg-sidebar-desktop.svg");
  background-repeat: no-repeat;
@@ -61,7 +63,7 @@ width: 25%;
 
   display: flex;
   align-items: center;
-  /* padding: 2.5rem; */
+  
   gap: 15px;
 }
 
@@ -115,7 +117,7 @@ form{
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-  /* gap: 20PX; */
+  
 }
 
 form input{
@@ -220,10 +222,16 @@ form label{
   padding-top: 4rem;
 }
 
+.buttons-3{
+   display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
 .back-btn{
   background: none;
   border: none;
-  color: var(--Blue-950);
+  color: var(--Grey-500);
   font-family: var(--font-Ubuntu);
   font-size: 16px;
   cursor: pointer;
@@ -240,6 +248,81 @@ form label{
   cursor: pointer;
 }
 
+
+.Pick-add h2{
+  padding-top: 2rem;
+  font-family: var(--font-Ubuntu);
+  color: var(--Blue-950);
+  font-size: 35px;
+}
+
+.Pick-add p{
+  padding-top: 1rem;
+  font-family: var(--font-Ubuntu);
+  color: var(--Grey-500);
+  font-size: 18px;
+}
+
+.plans-pg3{
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.online{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 1.2rem 1rem;
+  border: 1px solid var(--Purple-600);
+  border-radius: 8px;
+}
+
+.left{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  line-height: 5px;
+}
+
+.info h3{
+  color: var(--Blue-950);
+  font-family: var(--font-Ubuntu);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.info p{
+  font-size: 14px;
+}
+
+.check{
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--Purple-200);
+  border-radius: 5px;
+  background-color: var(--Purple-600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.online span{
+  color: var(--Purple-600);
+}
+
+
+
 .finishing h2{
     padding-top: 2rem;
   font-family: var(--font-Ubuntu);
@@ -252,4 +335,672 @@ form label{
   font-family: var(--font-Ubuntu);
   color: var(--Grey-500);
   font-size: 18px;
+}
+
+.final{
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+hr{
+  opacity: .6;
+}
+
+.final-arc,
+.on-service,
+.lg-storage,
+.total
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-Ubuntu);
+}
+
+.final-arc h3{
+  color: var(--Blue-950);
+  font-weight: 500;
+}
+
+.final-arc p{
+  color: var(--Blue-950);
+  font-weight: 500;
+}
+
+.change button{
+  border: none;
+  font-family: var(--font-Ubuntu);
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--Grey-500);
+  background-color: transparent;
+  border-bottom: 1px solid var(--Grey-500);
+}
+
+.change button:hover{
+  color: var(--Purple-600);
+  border-bottom: 1px solid var(--Purple-600);
+
+}
+
+.on-service h4{
+  color: var(--Grey-500);
+  font-weight: 400;
+}
+
+.on-service p{
+  color: var(--Blue-950);
+  opacity: .8;
+}
+
+.lg-storage h4{
+color: var(--Grey-500);
+  font-weight: 400;
+}
+
+.lg-storage p{
+  color: var(--Blue-950);
+  opacity: .8;
+}
+
+.total{
+  padding-top: 2rem;
+}
+
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --Marine-blue: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --Light-blue: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
+
+  --Cool-gray: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 100%, 100%);
+
+  --font-main: "Ubuntu", sans-serif;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background: var(--Magnolia);
+  font-family: var(--font-main);
+}
+
+/* ================================================================= */
+/* WRAPPER */
+/* ================================================================= */
+
+.body {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.main {
+  background: var(--White);
+  width: 950px;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+}
+
+.page-1 {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* ================================================================= */
+/* SIDEBAR */
+/* ================================================================= */
+
+.sidebar {
+  width: 280px;
+  background-image: url("/assets/images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  color: var(--White);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.circle {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--White);
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.circle.active {
+  background: var(--Magnolia);
+  color: var(--Marine-blue);
+}
+
+.text p {
+  font-size: 12px;
+  color: var(--Cool-gray);
+}
+
+.text h3 {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+/* ================================================================= */
+/* CONTENT */
+/* ================================================================= */
+
+.content {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+h2 {
+  font-size: 30px;
+  color: var(--Marine-blue);
+  margin-bottom: 8px;
+}
+
+p {
+  color: var(--Cool-gray);
+}
+
+/* ================================================================= */
+/* PAGE 1 – PERSONAL INFO */
+/* ================================================================= */
+
+.personal-info form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-info label {
+  margin-top: 1.4rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--Marine-blue);
+}
+
+.personal-info input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--Light-gray);
+  font-size: 15px;
+}
+
+.personal-info input:focus {
+  outline: 1px solid var(--Purplish-blue);
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.submit-btn button,
+.next-btn {
+  padding: 10px 22px;
+  background: var(--Marine-blue);
+  color: var(--White);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn button:hover,
+.next-btn:hover {
+  opacity: 0.9;
+}
+
+.personal-info input:focus {
+  outline: 1px solid var(--Purplish-blue);
+} /* ====================== ERROR STATES ====================== */
+.input-error {
+  border: 1px solid var(--Strawberry-red); /* red border for invalid input */
+}
+.error-msg {
+  color: var(--Strawberry-red);
+  font-size: 12px;
+  font-family: var(--font-main);
+  margin-top: 5px;
+}
+
+/* ================================================================= */
+/* PAGE 2 – PLAN SELECTION */
+/* ================================================================= */
+
+.plans {
+  display: flex;
+  gap: 20px;
+  margin-top: 2.2rem;
+}
+
+.plan-card {
+  width: 160px;
+  padding: 1rem;
+  border: 1px solid var(--Light-gray);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.plan-card:hover {
+  border-color: var(--Purplish-blue);
+}
+
+.plan-card.active {
+  border-color: var(--Purplish-blue);
+  background: var(--Magnolia);
+}
+
+.plan-card img {
+  margin-bottom: 20px;
+  width: 45px;
+}
+
+.plan-card h3 {
+  color: var(--Marine-blue);
+  margin-bottom: 5px;
+}
+
+.plan-card span {
+  color: var(--Cool-gray);
+  font-size: 14px;
+}
+
+/* Billing Toggle */
+
+.billing-toggle {
+  margin-top: 2rem;
+  padding: 12px;
+  background: var(--Alabaster);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.billing-toggle p {
+  font-weight: 500;
+  color: var(--Cool-gray);
+}
+
+.billing-toggle .active-type {
+  color: var(--Marine-blue);
+}
+
+/* Toggle Switch */
+
+.switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background: var(--Marine-blue);
+  position: absolute;
+  cursor: pointer;
+  border-radius: 35px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.slider:before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  background: var(--White);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  transition: 0.3s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* Buttons */
+
+.buttons,
+.buttons-3 {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--Cool-gray);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  color: var(--Marine-blue);
+}
+
+/* ================================================================= */
+/* PAGE 3 – ADD-ONS */
+/* ================================================================= */
+
+.plans-pg3 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+.addon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--Light-gray);
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.addon.selected {
+  background: var(--Magnolia);
+  border-color: var(--Purplish-blue);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.addon input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.addon span {
+  color: var(--Purplish-blue);
+  font-weight: 500;
+}
+
+/* ================================================================= */
+/* PAGE 4 – SUMMARY */
+/* ================================================================= */
+
+.final {
+  background: var(--Magnolia);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.final-arc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.final-arc h3 {
+  color: var(--Marine-blue);
+  font-size: 18px;
+}
+
+.change-btn {
+  margin-top: 5px;
+  border: none;
+  background: none;
+  color: var(--Cool-gray);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.on-service,
+.lg-storage {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.total {
+  border-top: 1px solid var(--Light-gray);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-price {
+  color: var(--Purplish-blue);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ================================================================= */
+/* THANK YOU PAGE */
+/* ================================================================= */
+
+.thank-you {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.thank-you img {
+  width: 70px;
+  margin-bottom: 2rem;
+}
+
+.thank-you h2 {
+  color: var(--Marine-blue);
+}
+
+.thank-you p {
+  width: 70%;
+  margin: auto;
+  color: var(--Cool-gray);
+  margin-top: 1rem;
+  line-height: 1.4rem;
+}
+
+/* ================================================================= */
+/* RESPONSIVE — 650px & BELOW */
+/* ================================================================= */
+
+@media (max-width: 650px) {
+
+  /* IMPORTANT PART — this is the one you asked about */
+  .page-1 {
+    flex-direction: column;   /* <-- This stacks sidebar + content */
+    width: 100%;
+    gap: 0;
+  }
+
+  /* WRAPPER */
+  .main {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    background: none;
+  }
+
+  .body {
+    padding: 0;
+  }
+
+  /* SIDEBAR (mobile top banner) */
+  .sidebar {
+    width: 100%;
+    height: 200px;
+    border-radius: 0;
+    background-image: url("/assets/images/bg-sidebar-mobile.svg");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .steps {
+    flex-direction: row;
+    gap: 18px;
+  }
+
+  .text {
+    display: none;
+  }
+
+  /* CONTENT BOX */
+  .content {
+    width: 90%;
+    margin: -3.5rem auto 0 auto;
+    background: var(--White);
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+  }
+
+  /* INPUTS */
+  .personal-info input {
+    font-size: 15px;
+    padding: 11px;
+  }
+
+ 
+
+  /* NEXT BUTTON FIXED BOTTOM */
+  .submit-btn,
+  .buttons,
+  .buttons-3 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--White);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.06);
+  }
+
+  /* PLANS STACK */
+  .plans {
+    flex-direction: column;
+  }
+
+  .plan-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+
+/* ================================================================= */
+/* PAGE 2 – MOBILE LAYOUT FIXES */
+/* ================================================================= */
+@media (max-width: 650px) {
+
+  /* Make plans vertical */
+  .plans {
+    flex-direction: column;
+    gap: 15px; /* tighter gap like mobile design */
+    margin-top: 1.5rem;
+  }
+
+  /* Full-width card */
+  .plan-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 15px;
+  }
+
+  /* Fix icon spacing */
+  .plan-card img {
+    margin-bottom: 0;
+    width: 45px;
+    height: 45px;
+  }
+
+  /* Fix alignment + spacing */
+  .plan-card h3 {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .plan-card span {
+    font-size: 13px;
+  }
+
+  /* Billing toggle full width */
+  .billing-toggle {
+    margin-top: 1.8rem;
+    width: 100%;
+    padding: 14px;
+  }
+
+  /* Keep monthly & yearly button spacing correct */
+  .billing-toggle p {
+    font-size: 15px;
+  }
+
+  /* Keep content container correct */
+  .content {
+    width: 90%;
+    margin: -3rem auto 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+
+ 
 }
